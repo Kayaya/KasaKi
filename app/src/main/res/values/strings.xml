@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kasa-Ki</string>
+    <string name="upload">Publicar</string>
+    <string name="settings">Configurações</string>
+    <string name="slogan">Encontra serviços mais baratos AKI.</string>
+    <string name="main">Publica.AKI</string>
 </resources>
