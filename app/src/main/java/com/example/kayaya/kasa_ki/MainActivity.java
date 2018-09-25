@@ -6,8 +6,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(myToolbar);
+
+        //Spinner
+        Spinner mySpinner = (Spinner)findViewById(R.id.spinner1);
+
+        ArrayAdapter<CharSequence> myAdapter = ArrayAdapter.createFromResource(this,
+                R.array.cities, android.R.layout.simple_spinner_item);
+        //ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
+        //        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.cities));
+        //specify that adapter has drop down list
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //set spinner to the adapter, to show the data into the spinner
+        mySpinner.setAdapter(myAdapter);
     }
     //Setting up the Menu
     @Override
@@ -41,5 +57,17 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+        //spinner.setOnItemSelectedListener(this);
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

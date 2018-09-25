@@ -16,14 +16,14 @@
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         />
-
+    <!-- FIRST LAYOUT-->
     <LinearLayout
         android:id="@+id/middle_section1"
         android:clipToPadding="false"
         android:gravity="center"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="0.50"
+        android:layout_weight="0.75"
         android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
@@ -81,6 +81,8 @@
                         android:layout_weight="1"
                         android:text="@string/slogan" />
 
+
+
                 </LinearLayout>
 
 
@@ -90,23 +92,36 @@
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
+    <!-- MIDDLE LAYOUT-->
     <LinearLayout
         android:id="@+id/middle_section2"
+        android:layout_marginTop="5dp"
         android:clipToPadding="false"
         android:gravity="center"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="2.25"
-        android:orientation="horizontal">
+        android:layout_weight="2"
+        android:weightSum="2"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
+            android:layout_gravity="top" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img" />
 
     </LinearLayout>
+    <!-- BOTTOM LAYOUT-->
     <LinearLayout
         android:id="@+id/middle_section3"
         android:clipToPadding="false"
@@ -118,7 +133,6 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardview3"
-            android:layout_margin="1dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.50" >
@@ -135,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.1"
                     android:background="@color/main_color"
-                    app:srcCompat="@drawable/ic_home_black_24dp" />
+                    android:src="@drawable/ic_home_black_24dp" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -151,7 +165,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.1"
                     android:background="@color/main_color"
-                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
