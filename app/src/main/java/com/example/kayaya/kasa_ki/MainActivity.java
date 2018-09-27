@@ -1,5 +1,7 @@
 package com.example.kayaya.kasa_ki;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -7,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -32,6 +36,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //set spinner to the adapter, to show the data into the spinner
         mySpinner.setAdapter(myAdapter);
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.rgb(103, 55, 155));
+        }
     }
     //Setting up the Menu
     @Override

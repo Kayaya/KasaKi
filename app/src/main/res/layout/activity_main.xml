@@ -5,8 +5,7 @@
     android:weightSum="3"
     android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/main_toolbar"
@@ -15,6 +14,8 @@
         android:background="@color/main_color"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
+        android:theme="@style/CustomisedThemeToolbarDarkOverflow"
+        app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar"
         />
     <!-- FIRST LAYOUT-->
     <LinearLayout
@@ -104,14 +105,14 @@
         android:weightSum="2"
         android:orientation="vertical">
 
-
-
         <Spinner
             android:id="@+id/spinner1"
             android:layout_marginTop="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top" />
+
+
 
         <View
             android:id="@+id/view"
