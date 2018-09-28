@@ -1,6 +1,481 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:gravity="center"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/CustomisedThemeToolbarDarkOverflow"
+        app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar"
+        />
+    <!-- FIRST LAYOUT-->
+    <LinearLayout
+        android:id="@+id/middle_section1"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.75"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:weightSum="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardview_main"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.20" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/text-main"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.50"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/text-slogan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/slogan" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <!-- MIDDLE LAYOUT-->
+    <LinearLayout
+        android:id="@+id/middle_section2"
+        android:layout_marginTop="5dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:weightSum="3" >
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/carros_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/carrobtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_carros_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/carro" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/musica0_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/musicabtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_musica0_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/musica" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/salao0_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/salaobtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_salao0_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/salao" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:weightSum="3">
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/buffet_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/buffetabtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_buffet_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/buffet" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/vestido_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/vestidobtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_vestido_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/vestido" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/decoracoes_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/decoracaobtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_decoracoes_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/decoracao" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="1dp"
+                        android:weightSum="3">
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/convites_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/convitebtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_convites_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/convite" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/dj_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/djbtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_dj_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/dj" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/bolos_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/shape_bg"
+                                    android:text="@string/bolobtn" />
+
+                                <ImageButton
+                                    android:id="@+id/img_bolos_btn"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20mm"
+                                    android:layout_weight="1"
+                                    android:background="?android:selectableItemBackground"
+                                    android:src="@drawable/bolo" />
+
+
+                            </LinearLayout>
+                        </TableRow>
+
+                    </LinearLayout>
+
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <!-- BOTTOM LAYOUT-->
+    <LinearLayout
+        android:id="@+id/middle_section3"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.25"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@color/main_color"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@color/main_color"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</LinearLayout>

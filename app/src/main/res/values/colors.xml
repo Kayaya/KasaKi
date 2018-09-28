@@ -6,4 +6,6 @@
     <color name="main_color">#67379B</color>
     <color name="white">#ffffff</color>
     <color name="wine_dark">#31093d</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="cor">#483D8B</color>
 </resources>

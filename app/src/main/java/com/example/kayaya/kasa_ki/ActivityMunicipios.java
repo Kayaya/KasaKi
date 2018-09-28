@@ -11,34 +11,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+public class ActivityMunicipios extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.pesquisa_municipio);
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(myToolbar);
-
-        //Spinner
-        Spinner mySpinner = (Spinner)findViewById(R.id.spinner1);
-        Spinner spinner_municipio = (Spinner)findViewById(R.id.spinner2);
-
-        ArrayAdapter<CharSequence> myAdapter = ArrayAdapter.createFromResource(this,
-                R.array.cities, android.R.layout.simple_spinner_item);
-        ArrayAdapter<CharSequence> adapter_municipio = ArrayAdapter.createFromResource(this,
-                R.array.municipios_luanda, android.R.layout.simple_spinner_item);
-        //ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
-        //        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.cities));
-        //specify that adapter has drop down list
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //set spinner to the adapter, to show the data into the spinner
-        mySpinner.setAdapter(myAdapter);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             Window window = getWindow();
@@ -72,15 +53,4 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
-        //spinner.setOnItemSelectedListener(this);
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }

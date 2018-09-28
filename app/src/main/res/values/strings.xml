@@ -5,6 +5,17 @@
     <string name="slogan">Encontra serviços mais baratos AKI.</string>
     <string name="main">Publica.AKI</string>
 
+    <!-- Botton strings -->
+    <string name="carrobtn">Carros</string>
+    <string name="musicabtn">Música</string>
+    <string name="salaobtn">Salão</string>
+    <string name="buffetabtn">Buffet</string>
+    <string name="vestidobtn">Veestido de Noiva</string>
+    <string name="decoracaobtn">Decorações</string>
+    <string name="convitebtn">Convintes</string>
+    <string name="djbtn">DJs</string>
+    <string name="bolobtn">Bolos</string>
+
     <!-- -->
     <string-array name="cities">
         <item>Selecione a província</item>
@@ -26,5 +37,21 @@
         <item>Uíge</item>
         <item>Zaire</item>
     </string-array>
+
+    <!-- -->
+    <string-array name="municipios_luanda">
+        <item>Selecione o município</item>
+        <item>Belas</item>
+        <item>Cacuaco</item>
+        <item>Cazenga</item>
+        <item>Icolo e Bengo</item>
+        <item>Luanda</item>
+        <item>Quicama</item>
+        <item>Viana</item>
+        <item>Talatona</item>
+        <item>Kilamba Kiaxi</item>
+    </string-array>
+
+
 
 </resources>
